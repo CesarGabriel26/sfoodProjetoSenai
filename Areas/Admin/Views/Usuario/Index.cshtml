@@ -1,0 +1,57 @@
+@model IEnumerable<App.Models.Usuario>
+
+
+<br>
+
+<p class=""   >
+    <a asp-action="Create" class="botaoVermelho">Criar novo item</a>
+</p>
+<table class="table ">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+           <th class="d-none d-md-table-cell">
+                @Html.DisplayNameFor(model => model.CEP)
+            </th>
+            <th class="d-none d-md-table-cell">
+                @Html.DisplayNameFor(model => model.Imagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th></th>
+                </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td class="d-none d-md-table-cell">
+                    @Html.DisplayFor(modelItem => item.CEP)
+                </td>
+                <td class="d-none d-md-table-cell">
+                    <img src="@item.Imagem" alt="">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Senha)
+                </td>
+                <td >
+                    <a  class="" asp-action="Edit" asp-route-id="@item.UsuarioId">Edit</a> |
+                    <a  class="" asp-action="Details" asp-route-id="@item.UsuarioId">Details</a> |
+                    <a  class="" asp-action="Delete" asp-route-id="@item.UsuarioId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

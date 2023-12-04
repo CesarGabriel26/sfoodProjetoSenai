@@ -1,0 +1,27 @@
+@model App.Models.Categoria
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1  class="">Deletar</h1>
+
+<h3  class="">Você tem certeza de que quer deletar esse item?</h3>
+<div  class="">
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CategoriaId" />
+        <input type="submit" value="Delete" class="botaoVermelho" /> |
+        <a asp-action="Index" class="botaoVermelho">Voltar a lista</a>
+    </form>
+</div>

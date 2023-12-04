@@ -1,0 +1,102 @@
+@model IEnumerable<App.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br>
+<h1 class="">Produtos</h1>
+<p class="">
+    <a asp-action="Create" class="botaoVermelho">Criar novo item</a>
+</p>
+
+<form class="d-flex align-items-center no-print" asp-action="Index" method="get">
+    <input type="text" name="txtFiltro" placeholder="Digite aqui o que procura" value="@ViewBag.txtFiltro"
+        class="form-control">
+
+    <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Buscar</button>
+    <button class="btn btn-success" value="Relatorio" name="botao" type="submit">Relatorio</button>
+
+    <div>
+        <button class="btn btn-secondary dropdown-toggle btn-danger" data-bs-toggle="dropdown" aria-expanded="false">
+            Exportar
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <button class="dropdown-item" type="submit" name="botao" value="XML">
+                    XML
+                </button>
+            </li>
+            <li>
+                <button class="dropdown-item" type="submit" name="botao" value="Json">
+                    Json
+                </button>
+            </li>
+        </ul>
+    </div>
+</form>
+
+<table class="table ">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th class="d-none d-md-table-cell">
+                @Html.DisplayNameFor(model => model.Imagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmExtoque)
+            </th>
+            <th class="d-none d-md-table-cell">
+                @Html.DisplayNameFor(model => model.Rate)
+            </th>
+            <th class="d-none d-md-table-cell">
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td class="d-none d-md-table-cell">
+                    <div class="produtoimage">
+                        <img src="@item.Imagem" alt="">
+                    </div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.preco)
+                </td>
+                <td>
+                    @if (item.EmExtoque)
+                    {
+                        <p>Em estoque</p>
+                    }
+                    else
+                    {
+                        <p>Fora de estoque</p>
+                    }
+                </td>
+                <td class="d-none d-md-table-cell">
+                    @Html.DisplayFor(modelItem => item.Rate)
+                </td>
+                <td class="d-none d-md-table-cell">
+                    @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                </td>
+                <td>
+                    <a class="" asp-action="Edit" asp-route-id="@item.IdPaises">Editar</a> |
+                    <a class="" asp-action="Details" asp-route-id="@item.IdPaises">Detalhes</a> |
+                    <a class="" asp-action="Delete" asp-route-id="@item.IdPaises">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

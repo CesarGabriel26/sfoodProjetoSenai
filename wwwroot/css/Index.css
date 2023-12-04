@@ -1,0 +1,46 @@
+@media(max-width: 300px){
+    img{
+        display: none;
+    }
+}
+
+.imgem {
+    margin: 20px;
+    width: 240px;
+}
+
+.diImg {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 20px;
+}
+
+.titulo {
+    size: 50px;
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.Descricao {
+    border-bottom: 2px solid red;
+    border-top: 2px solid red;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.h3 {
+    color: black;
+}
+
+.letra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imagemInicio {
+    width: 300px;
+    margin: 20px ;
+}

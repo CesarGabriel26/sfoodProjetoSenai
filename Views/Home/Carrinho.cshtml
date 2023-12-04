@@ -1,0 +1,99 @@
+@model ProdutoCategoriaViewModel
+
+@section scripts{
+    <script src="~/js/site.js"></script>
+}
+
+@{
+    ViewData["Title"] = "Cardapio";
+}
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+        
+        <tr class="align-middle">
+                <th>
+                    Nome do produto
+                </th>
+                <th class="d-none d-md-table-cell">
+                    Imagem do produto
+                </th>
+                <th>
+                    preco do produto
+                </th>
+                <th class="d-none d-md-table-cell">
+                    Produto em estoque
+                </th>
+                <th class="d-none d-md-table-cell">
+                    Categoria
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+            <tr class="align-middle">
+                <td>
+                    Hamburgão de forno
+                </td>
+                <th class="d-none d-md-table-cell">
+                    <div class="produtoimage">
+                        <img class="imagem" src="https://static.ifood-static.com.br/image/upload/t_low/pratos/afbbc2a2-a1cd-4f20-88d7-02ee12d9d1f3/202101211213_0mqt_.jpeg" alt="">
+                    </div>
+                </td>
+                <td>
+                    8,00
+                </td>
+                <th class="d-none d-md-table-cell">
+                    <p>Em estoque</p>
+                </td>
+                <th class="d-none d-md-table-cell">
+                    cafeteria
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+<div class="row w-100 justify-content-between text-light">
+
+    <div class="col-12 col-md-5   p-0">
+        <h5 class="w-100 bg-danger text-white p-2">Cupom</h5>
+        <div class="container">
+            <p>
+                Digite o codigo do cupom caso possua um
+
+                <div class="col-8 d-flex align-items-center ">
+                    <input id="Cuppom" type="text" class="form-control col-7 ps-2 text-uppercase border border-2 border-dark ">
+                    <button  class="ms-2 col-6 col-md-5 col-lg-5 btn btn-outline-danger">Aplicar cupom</button>
+                </div>
+
+            </p>
+        </div>
+    </div>
+
+
+    <div class="col-12 col-md-5 mt-3 mt-md-0 p-0">
+        <h5 class="w-100 bg-danger text-white p-2">Total da compra</h5>
+        <div class="container">
+            <div class="d-flex justify-content-between ">
+                <p>Soma Total: R$</p>
+                <p id="SomaTotal"> 00.00</p>
+            </div>
+            <div class="d-flex justify-content-between ">
+                <p>Desconto: %</p>
+                <p id="Desconto">10</p>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="d-flex justify-content-between align-items-center ">
+                <p class="m-2">Total: R$</p>
+                <p class="m-2" id="TotalFinal">00.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

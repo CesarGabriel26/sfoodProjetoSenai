@@ -1,0 +1,44 @@
+@model IEnumerable<App.Models.Banner>
+<!-- Sessão de carousel -->
+<section id="meucarrossel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <!-- Lista de Imagens - Banners -->
+    <div class="carousel-inner">
+        @{
+            string bannerAtivo = " active";
+        }
+        @foreach (var item in Model)
+        {
+            if (item.Exibir)
+            {
+                <div class="carousel-item @bannerAtivo">
+                    @{
+                        bannerAtivo = "";
+                    }
+                    <img src="~/fotos/@item.Imagem" class="w-100 d-block">
+                    <div class="carousel-caption">
+                        @if (item.Titulo != null && item.Titulo != "")
+                        {
+                            <h4>@item.Titulo</h4>
+                        }
+                        @if (item.Subtitulo != null && item.Subtitulo != "")
+                        {
+                            <p>@item.Subtitulo</p>
+                        }
+                        @if (item.Link != null && item.Link != "")
+                        {
+                            <a href="@item.Link" class="btn btn-primary"> Saiba mais </a>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#meucarrossel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#meucarrossel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+</section>
