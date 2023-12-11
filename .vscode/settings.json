@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net7.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/30b8c30e-9a4c-47d6-a27c-351b4d74d318/resourceGroups/Projeto/providers/Microsoft.Web/sites/Sfood-Senai"
+}

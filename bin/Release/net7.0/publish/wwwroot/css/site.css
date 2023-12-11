@@ -1,0 +1,73 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+* {
+  font-family: "Cardo variant0", red;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  color: var(--bs-light);
+}
+
+body {
+  margin-bottom: 60px;
+  /*background-color: var(--bs-dark) !important;*/
+  background-color: white;
+
+}
+
+
+main {
+  min-height: calc(100% - calc(79px * 1));
+}
+
+
+.only-print {
+  display: none;
+}
+
+@media print {
+  .only-print {
+    display: block;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
+
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+.botaoAmarelo{
+  background-color: var(--Laranja);
+  box-shadow: 3px 3px 0px var(--DropShadow) inset;
+  color: white;
+  border: 0px solid var(--Laranja);
+  border-radius: 5px;
+  margin: 8px;
+  height: 100px;
+}

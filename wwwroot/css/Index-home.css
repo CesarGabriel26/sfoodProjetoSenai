@@ -1,0 +1,64 @@
+.bem {
+    text-align: center;
+    color: orange;
+}
+
+.Descricao {
+    box-shadow: 0px 0px 10px 0px;
+}
+
+.SfoodHeader {
+    box-shadow: 0px 7px 10px var(--DropShadow);
+    background: var(--headerBg);
+}
+
+.SfoodHeader .nav-link {
+    color: var(--TextColors);
+}
+
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, .58);
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 5px;
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+    color: white;
+}
+
+
+
+.BotaoLaranja {
+    background-color: var(--Laranja);
+    box-shadow: 3px 3px 7px var(--DropShadow) inset;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.BotaoLaranja:hover {
+    background-color: white;
+    box-shadow: 0px 0px 7px white;
+    color: var(--Laranja);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.EfeitoLinks {
+    color: black;
+    margin: 3px;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.EfeitoLinks:hover {
+    color: var(--Laranja);
+    text-decoration: none;
+    transition: 300ms;
+}

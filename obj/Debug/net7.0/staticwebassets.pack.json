@@ -5,28 +5,24 @@
       "PackagePath": "staticwebassets\\sfood.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Create.css",
-      "PackagePath": "staticwebassets\\css\\Create.css"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\App_Data\\Dados.db",
+      "PackagePath": "staticwebassets\\App_Data\\Dados.db"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Index-Pc.css",
-      "PackagePath": "staticwebassets\\css\\Index-Pc.css"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Cardapio.css",
+      "PackagePath": "staticwebassets\\css\\Cardapio.css"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Index-home.css",
+      "PackagePath": "staticwebassets\\css\\Index-home.css"
     },
     {
       "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Produto.css",
-      "PackagePath": "staticwebassets\\css\\Produto.css"
-    },
-    {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\carrinho.css",
-      "PackagePath": "staticwebassets\\css\\carrinho.css"
-    },
-    {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\descricao.css",
-      "PackagePath": "staticwebassets\\css\\descricao.css"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Root.css",
+      "PackagePath": "staticwebassets\\css\\Root.css"
     },
     {
       "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\site.css",
@@ -37,44 +33,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\fotos\\1aa7a921-51d3-460f-90cd-8437d6d4bb24vale-presente-com-desconto-de-30_1436-484.jpg",
-      "PackagePath": "staticwebassets\\fotos\\1aa7a921-51d3-460f-90cd-8437d6d4bb24vale-presente-com-desconto-de-30_1436-484.jpg"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\fotos\\3b9dd660-8c69-4ae7-8a15-8c32c7de4613banner1.png",
+      "PackagePath": "staticwebassets\\fotos\\3b9dd660-8c69-4ae7-8a15-8c32c7de4613banner1.png"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\fotos\\4be623e5-b34f-4926-9552-ce5946de96effast-food-realista-com-banner-de-simbolos-de-lanches-frescos_1284-57191.jpg",
-      "PackagePath": "staticwebassets\\fotos\\4be623e5-b34f-4926-9552-ce5946de96effast-food-realista-com-banner-de-simbolos-de-lanches-frescos_1284-57191.jpg"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Celular.png",
+      "PackagePath": "staticwebassets\\img\\Celular.png"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\13255367.png",
-      "PackagePath": "staticwebassets\\img\\13255367.png"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Celular2.png",
+      "PackagePath": "staticwebassets\\img\\Celular2.png"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Banner0.jpg",
-      "PackagePath": "staticwebassets\\img\\Banner0.jpg"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Moto.png",
+      "PackagePath": "staticwebassets\\img\\Moto.png"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Frango.webp",
-      "PackagePath": "staticwebassets\\img\\Frango.webp"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Logo.png",
-      "PackagePath": "staticwebassets\\img\\Logo.png"
-    },
-    {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\LogoIcon Branca.png",
-      "PackagePath": "staticwebassets\\img\\LogoIcon Branca.png"
-    },
-    {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\LogoIcon.png",
-      "PackagePath": "staticwebassets\\img\\LogoIcon.png"
-    },
-    {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\LogoIcon.svg",
-      "PackagePath": "staticwebassets\\img\\LogoIcon.svg"
-    },
-    {
-      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\js\\heart.js",
-      "PackagePath": "staticwebassets\\js\\heart.js"
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\logo2.png",
+      "PackagePath": "staticwebassets\\img\\logo2.png"
     },
     {
       "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\js\\site.js",

@@ -9,6 +9,12 @@ C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\sfood.pdb
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.Mvc.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.Razor.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.Helpers.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.WebPages.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.Build.dll
@@ -51,6 +57,7 @@ C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGen
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Newtonsoft.Json.dll
@@ -81,6 +88,9 @@ C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Runtime.Caching.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Security.Permissions.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\X.PagedList.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\X.PagedList.Mvc.dll
+C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\X.PagedList.Web.Common.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\af\Humanizer.resources.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\ar\Humanizer.resources.dll
 C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\az\Humanizer.resources.dll
@@ -270,6 +280,7 @@ C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\staticwebassets\msbuild.buildTrans
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\scopedcss\bundle\sfood.styles.css
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\scopedcss\projectbundle\sfood.bundle.scp.css
@@ -279,14 +290,3 @@ C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\refint\sfood.dll
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\sfood.pdb
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\sfood.genruntimeconfig.cache
 C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\ref\sfood.dll
-C:\Users\Aluno\Desktop\sfood\obj\Debug\net7.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.Mvc.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.Razor.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.Helpers.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\System.Web.WebPages.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\X.PagedList.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\X.PagedList.Mvc.dll
-C:\Users\Aluno\Desktop\sfood\bin\Debug\net7.0\X.PagedList.Web.Common.dll

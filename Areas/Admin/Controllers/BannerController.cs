@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using App.Context;
 using App.Models;
+using System.Xml;
+using System.Text;
+using X.PagedList;
+
 namespace App.Admin.Controllers
 {
     [Area("Admin")]
@@ -14,9 +18,46 @@ namespace App.Admin.Controllers
             _caminhoPasta = pastaSite.WebRootPath;
         }
 
-        public IActionResult ListaBanners()
+        public IActionResult ListaBanners(string botao,string? txtFiltro, string? celOrdenacao, int pagina = 1) 
         {
-            return View(_BancoDados.Banners.ToList());
+            int PageSize = 5;
+
+            IQueryable<Banner> lista = _BancoDados.Banners;
+
+            if (botao == "Relatorio")
+            {
+                PageSize = lista.Count();
+            }
+
+
+            if (txtFiltro != null && txtFiltro != "")
+            {
+                ViewData["txtFiltro"] = txtFiltro;
+                lista = lista.Where(item => item.Titulo.ToLower().Contains(txtFiltro.ToLower()));
+            }
+            
+
+            if (celOrdenacao == "Titulo")
+            {
+                lista = lista.OrderBy(item => item.Titulo.ToLower());
+            }
+            
+            else if (celOrdenacao == "Subtitulo")
+            {
+                lista = lista.OrderBy(item => item.Subtitulo.ToLower());
+            }
+            
+            /*if(botao == "XML")
+            {
+                return ExportarXML(lista.ToList());
+            }
+            else if(botao == "Json")
+            {
+                return ExportarJson(lista.ToList());
+            }*/
+            
+            return View(lista.ToPagedList(pagina, PageSize));
+
         }
 
         public IActionResult CriarBanner()

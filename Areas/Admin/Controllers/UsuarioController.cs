@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using App.Context;
 using App.Models;
+using System.Xml;
+using System.Text;
+using X.PagedList;
 
 namespace sfood.Areas.Admin.Controllers
 {
@@ -23,12 +26,111 @@ namespace sfood.Areas.Admin.Controllers
         }
 
         // GET: Admin/Usuario
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string botao,string? txtFiltro, string? celOrdenacao, int pagina = 1) 
         {
-            return _context.Usuarios != null ?
-              View(await _context.Usuarios.ToListAsync()) :
-              Problem("Entity set 'AppDbContext.Usuarios'  is null.");
+            int PageSize = 5;
+
+            IQueryable<Usuario> lista = _context.Usuarios;
+
+            if (botao == "Relatorio")
+            {
+                PageSize = lista.Count();
+            }
+
+
+            if (txtFiltro != null && txtFiltro != "")
+            {
+                ViewData["txtFiltro"] = txtFiltro;
+                lista = lista.Where(item => item.Nome.ToLower().Contains(txtFiltro.ToLower()));
+            }
+            
+
+            if (celOrdenacao == "Nome")
+            {
+                lista = lista.OrderBy(item => item.Nome.ToLower());
+            }
+
+            else if (celOrdenacao == "CEP")
+            {
+                lista = lista.OrderBy(item => item.CEP);
+            }
+            else if (celOrdenacao == "Login")
+            {
+                lista = lista.OrderBy(item => item.Login);
+            }
+
+            if(botao == "XML")
+            {
+                return ExportarXML(lista.ToList());
+            }
+            else if(botao == "Json")
+            {
+                return ExportarJson(lista.ToList());
+            }
+            
+            return View(lista.ToPagedList(pagina, PageSize));
+
         }
+
+                
+        private IActionResult ExportarJson(List<Usuario> lista)
+        {
+            var json = new StringBuilder();
+            json.AppendLine("{");
+            json.AppendLine(" \"Usuario\": [");
+            int total = 0;
+            foreach(var item in lista)
+            {
+                json.AppendLine("         {");
+                json.AppendLine($"         \"Id\": {item.UsuarioId},");
+                json.AppendLine($"         \"Nome\": \"{item.Nome}\",");
+                json.AppendLine($"         \"Imagem\": \"{item.Imagem}\"");
+                json.AppendLine($"         \"CEP\": \"{item.CEP}\"");
+                json.AppendLine($"         \"Login\": \"{item.Login}\"");
+                json.AppendLine($"         \"Senha\": \"{item.Senha}\"");
+                json.AppendLine("         }");
+                total++;
+                if (total < lista.Count())
+                {
+                    json.AppendLine("             ,");
+                }
+            }
+            json.AppendLine("        ]");
+            json.AppendLine("}");
+            return File(Encoding.UTF8.GetBytes(json.ToString()),
+            "application/json", "Dados_usuarios.json");
+        }
+
+        private IActionResult ExportarXML(List<Usuario> lista)
+        {
+            var arquivo = new StringWriter();
+            var xml = new XmlTextWriter(arquivo)
+            {
+                Formatting = Formatting.Indented
+            };
+            xml.WriteStartDocument();
+            xml.WriteStartElement("Dados");
+            xml.WriteStartElement("Usuarios");
+
+            foreach (var item in lista)
+            {
+                xml.WriteStartElement("Usuario");
+                xml.WriteElementString("Id", item.UsuarioId.ToString());
+                xml.WriteElementString("Nome", item.Nome);
+                xml.WriteElementString("Imagem", item.Imagem);
+                xml.WriteElementString("preco", item.CEP.ToString());
+                xml.WriteElementString("EmExtoque", item.Login.ToString());
+                xml.WriteElementString("Rate", item.Senha.ToString());
+                xml.WriteEndElement();
+            }
+
+            xml.WriteEndElement();
+            xml.WriteEndElement();
+
+            return File(Encoding.UTF8.GetBytes(arquivo.ToString()),
+            "appilication/xml", "dados_usuario.xml");
+        }
+
 
         public IActionResult Sair()
         {

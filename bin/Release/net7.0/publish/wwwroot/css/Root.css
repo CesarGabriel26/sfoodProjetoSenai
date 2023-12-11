@@ -1,0 +1,15 @@
+:root,[data-bs-theme=light] {
+    --Laranja : #FF9350;
+    --DropShadow : #8340165e;
+
+    --headerBg: white;
+    --TextColors: #000000;
+}
+
+[data-bs-theme=dark] {
+    --Laranja : #FF9350;
+    --DropShadow : #8340165e;
+
+    --headerBg: #2b2b2b;
+    --TextColors: #ffffff;
+}

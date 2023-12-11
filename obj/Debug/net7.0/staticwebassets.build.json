@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zeNYB0LvSJPVdO+/ddEtDcNUeUqortqNHcCr6cMGcFQ=",
+  "Hash": "/dfv+xybLRn+/beyTbXGUt7sWACHeMaBZXOhnU/RxcI=",
   "Source": "sfood",
   "BasePath": "_content/sfood",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\Aluno\\Desktop\\sfood\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\sfood.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\carrinho.css",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\App_Data\\Dados.db",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "css/carrinho.css",
+      "RelativePath": "App_Data/Dados.db",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\carrinho.css"
+      "OriginalItemSpec": "wwwroot\\App_Data\\Dados.db"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Create.css",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Cardapio.css",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "css/Create.css",
+      "RelativePath": "css/Cardapio.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Create.css"
+      "OriginalItemSpec": "wwwroot\\css\\Cardapio.css"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\descricao.css",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Index-home.css",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "css/descricao.css",
+      "RelativePath": "css/Index-home.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,24 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\descricao.css"
-    },
-    {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Index-Pc.css",
-      "SourceId": "sfood",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
-      "BasePath": "_content/sfood",
-      "RelativePath": "css/Index-Pc.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Index-Pc.css"
+      "OriginalItemSpec": "wwwroot\\css\\Index-home.css"
     },
     {
       "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Index.css",
@@ -136,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Produto.css",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Root.css",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "css/Produto.css",
+      "RelativePath": "css/Root.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,7 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Produto.css"
+      "OriginalItemSpec": "wwwroot\\css\\Root.css"
     },
     {
       "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\site.css",
@@ -187,12 +170,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\fotos\\1aa7a921-51d3-460f-90cd-8437d6d4bb24vale-presente-com-desconto-de-30_1436-484.jpg",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\fotos\\3b9dd660-8c69-4ae7-8a15-8c32c7de4613banner1.png",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "fotos/1aa7a921-51d3-460f-90cd-8437d6d4bb24vale-presente-com-desconto-de-30_1436-484.jpg",
+      "RelativePath": "fotos/3b9dd660-8c69-4ae7-8a15-8c32c7de4613banner1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fotos\\1aa7a921-51d3-460f-90cd-8437d6d4bb24vale-presente-com-desconto-de-30_1436-484.jpg"
+      "OriginalItemSpec": "wwwroot\\fotos\\3b9dd660-8c69-4ae7-8a15-8c32c7de4613banner1.png"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\fotos\\4be623e5-b34f-4926-9552-ce5946de96effast-food-realista-com-banner-de-simbolos-de-lanches-frescos_1284-57191.jpg",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Celular.png",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "fotos/4be623e5-b34f-4926-9552-ce5946de96effast-food-realista-com-banner-de-simbolos-de-lanches-frescos_1284-57191.jpg",
+      "RelativePath": "img/Celular.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,15 +201,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fotos\\4be623e5-b34f-4926-9552-ce5946de96effast-food-realista-com-banner-de-simbolos-de-lanches-frescos_1284-57191.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\Celular.png"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\13255367.png",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Celular2.png",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "img/13255367.png",
+      "RelativePath": "img/Celular2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\13255367.png"
+      "OriginalItemSpec": "wwwroot\\img\\Celular2.png"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Banner0.jpg",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\logo.png",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "img/Banner0.jpg",
+      "RelativePath": "img/logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +235,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Banner0.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Frango.webp",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\logo2.png",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "img/Frango.webp",
+      "RelativePath": "img/logo2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +252,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Frango.webp"
+      "OriginalItemSpec": "wwwroot\\img\\logo2.png"
     },
     {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Logo.png",
+      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Moto.png",
       "SourceId": "sfood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
       "BasePath": "_content/sfood",
-      "RelativePath": "img/Logo.png",
+      "RelativePath": "img/Moto.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,75 +269,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Logo.png"
-    },
-    {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\LogoIcon Branca.png",
-      "SourceId": "sfood",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
-      "BasePath": "_content/sfood",
-      "RelativePath": "img/LogoIcon Branca.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\LogoIcon Branca.png"
-    },
-    {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\LogoIcon.png",
-      "SourceId": "sfood",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
-      "BasePath": "_content/sfood",
-      "RelativePath": "img/LogoIcon.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\LogoIcon.png"
-    },
-    {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\LogoIcon.svg",
-      "SourceId": "sfood",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
-      "BasePath": "_content/sfood",
-      "RelativePath": "img/LogoIcon.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\LogoIcon.svg"
-    },
-    {
-      "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\js\\heart.js",
-      "SourceId": "sfood",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\",
-      "BasePath": "_content/sfood",
-      "RelativePath": "js/heart.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\heart.js"
+      "OriginalItemSpec": "wwwroot\\img\\Moto.png"
     },
     {
       "Identity": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\js\\site.js",

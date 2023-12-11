@@ -1,32 +1,84 @@
-﻿@{
+﻿@model IEnumerable<App.Models.Banner>
+
+@{
     ViewData["Title"] = "Home Page";
 }
+
+
+
+
 <main class="container">
 
-    <h1 class="titulo">Bem Vindo ao</h1>
+    <div>
 
-    <div class="diImg">
-        <img class="imgem" src="~/img/Logo.png">
-    </div>
+        <section id="meucarrossel" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel" >
+    
+            <!-- Lista de Imagens - Banners -->
+            <div class="carousel-inner">
+                @{
+                    string bannerAtivo = "active";
+                }
+                @foreach (var item in Model)
+                {
+                    //<!-- Imagem 1 -->
+                    @if(item.Exibir) {
+                        <div class="carousel-item @bannerAtivo" data-bs-interval="5000">
+                            @{
+                                bannerAtivo = " ";
+                            }
+                            
+                            <img src="~/fotos/@item.Imagem" class="w-100" d-block">
+                            <div class="carousel-caption">
+                                <h4>@item.Titulo</h4>
+                                <p>@item.Subtitulo</p>
+                                
+                                @if(@item.Link != null) {
+                                    <a href="@item.Link" class="btn BotaoLaranja">Saiba mais</a>
+                                }
+                                
+                            </div>
+                        </div>
+                    }
+                }
 
-
-    <div class="Descricao d-flex container">
-        <!--imagem motoboy-->
-        <div class="col-lg-6 col-md-2">
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/delivery-boy-riding-scooter-6744036-5678921.png" alt="" srcset=""
-                class="imagemInicio float-start display-none">
-        </div>
-        <div class="col-6 d-flex justify-content-center align-items-center flex-column">
-            <h1 class="letra">O que nós somos?</h1>
-            <div>
-                <h3 class="letra">Nós somos uma empresa especializada em entregas de alimentos de qualquer tipo!
-                    Está com fome? Basta pedir e nós entregamos!</h3>
             </div>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#meucarrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#meucarrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
 
+        </section>
 
     </div>
 
+    <div class="Descricao container">
+        <br>
+
+        <h1 class="bem"> Bem Vindo ao SFood </h1>
+
+        <div class="d-flex">
+
+            <!--imagem motoboy-->
+            <div class="col-lg-6 col-md-2">
+                <img class="imagemInicio" src="~/img/Moto.png">
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                <h1 class="letra">O que nós somos?</h1>
+                <div>
+                    <h3 class="letra">Nós somos uma empresa especializada em entregas de alimentos de qualquer tipo!
+                        Está com fome? Basta pedir e nós entregamos!</h3>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <br>
 
     <div class="Descricao d-flex container">
         <div class="col-6 d-flex justify-content-center align-items-center flex-column">
@@ -40,20 +92,21 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-4 col-sm-2">
-            <img src="https://png.pngtree.com/png-vector/20221005/ourmid/pngtree-person-hold-cellphone-order-food-or-products-online-on-gadget-png-image_6255108.png"
-                alt="" srcset="" class="imagemInicio float-end">
+            <img src="~/img/Celular.png" alt="" srcset="" class="imagemInicio float-end">
         </div>
     </div>
 
+    <br>
 
     <div class="Descricao d-flex container">
         <div class="col-lg-6 col-md-4 col-sm-2">
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/girl-login-in-online-account-8628867-6873896.png" alt="" srcset="" class="imagemInicio">
+            <img src="~/img/Celular2.png" alt="" srcset="" class="imagemInicio">
         </div>
         <div class="col-6 d-flex justify-content-center align-items-center flex-column">
             <h1>Como faço Log-in?</h1>
             <div class="d-flex justify-content-center">
-                <h3 class=" text-center float-start">Apenas clique em "Log-in" para acessar sua conta caso já tenha uma. Não possui
+                <h3 class=" text-center float-start">Apenas clique em "Log-in" para acessar sua conta caso já tenha uma.
+                    Não possui
                     uma
                     conta? Não há problema!
                     Clique em "Sign-In" para fornecer sua informações e criar uma conta S-Food!</h3>
@@ -61,5 +114,7 @@
         </div>
 
     </div>
+
+    <br>
 
 </main>

@@ -21,18 +21,10 @@
             </svg>
         </div>
 
-
-<!--categoria-->
-        <select class="todos" name="" id="CategoriaSelect">
-            <option value="Todos">Todos</option>
-            @foreach (var Categoria in Model.Categorias)
-            {
-                <option value="@Categoria.Nome">@Categoria.Nome</option>
-            }
-        </select>
-
     </div>
+    
     <div class="main">
+        <div class="Descricao">
             @foreach (var Categoria in Model.Categorias)
             {
                 <div class="categoria">
@@ -60,7 +52,8 @@
                     </div>
                 </div>
             }
-
+        </div>
+        <div class="Descricao">
             <div class="categoria">
                     <h1 class="Nome d-none">Todos</h1>
                     <div class="scroll">
@@ -78,9 +71,10 @@
                             </div>
                         }
 
-                    </div>
+                    ,mmm  </div>
                 </div>
             </div>
+        </div>
     </div>
 
     <div aria-label="Page navigation w-100">

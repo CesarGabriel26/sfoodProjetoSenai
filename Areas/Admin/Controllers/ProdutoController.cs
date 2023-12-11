@@ -24,7 +24,7 @@ namespace sfood.Controllers
             _context = context;
         }
        
-        public IActionResult Index(string botao,string? txtFiltro, string? selOrdenacao, int pagina = 1) 
+        public IActionResult Index(string botao,string? txtFiltro, string? celOrdenacao, int pagina = 1) 
         {
             int PageSize = 5;
 
@@ -43,43 +43,32 @@ namespace sfood.Controllers
             }
             
 
-            if (selOrdenacao == "Nome")
+            if (celOrdenacao == "Nome")
             {
                 lista = lista.OrderBy(item => item.Nome.ToLower());
             }
             
-            else if (selOrdenacao == "Imagem")
-            {
-                lista = lista.OrderBy(item => item.Imagem.ToLower());
-            }
-            else if (selOrdenacao == "preco")
+            else if (celOrdenacao == "preco")
             {
                 lista = lista.OrderBy(item => item.preco);
             }
-            else if (selOrdenacao == "EmExtoque")
-            {
-                lista = lista.OrderBy(item => item.EmExtoque);
-            }
-            else if (selOrdenacao == "Rate")
+           
+            else if (celOrdenacao == "Rate")
             {
                 lista = lista.OrderBy(item => item.Rate);
             }
-            else if (selOrdenacao == "Categoria")
-            {
-                lista = lista.OrderBy(item => item.Categoria);
-            } 
 
             if(botao == "XML")
             {
-                //hamando o metodo para gerar o XML da lista ja filtrada
+                //chamando o metodo para gerar o XML da lista ja filtrada
                 return ExportarXML(lista.ToList());
             }
             else if(botao == "Json")
             {
                 return ExportarJson(lista.ToList());
             }
-            //return View(lista.ToPagedList(pagina, pageSize));
-            return View(lista.ToPagedList(pagina, PageSize)); 
+            return View(lista.ToPagedList(pagina, PageSize));
+     
         }
         
         private IActionResult ExportarJson(List<Produto> lista)
@@ -114,9 +103,10 @@ namespace sfood.Controllers
         private IActionResult ExportarXML(List<Produto> lista)
         {
             var arquivo = new StringWriter();
-            var xml = new XmlTextWriter(arquivo);
-
-            xml.Formatting = System.Xml.Formatting.Indented;
+            var xml = new XmlTextWriter(arquivo)
+            {
+                Formatting = Formatting.Indented
+            };
             xml.WriteStartDocument();
             xml.WriteStartElement("Dados");
             xml.WriteStartElement("Usuario");
@@ -130,7 +120,7 @@ namespace sfood.Controllers
                 xml.WriteElementString("preco", item.preco.ToString());
                 xml.WriteElementString("EmExtoque", item.EmExtoque.ToString());
                 xml.WriteElementString("Rate", item.Rate.ToString());
-                xml.WriteElementString("Categoria", item.Categoria.Nome);
+                xml.WriteElementString("Categoria", item.CategoriaId.ToString());
                 xml.WriteEndElement();
             }
 

@@ -23,6 +23,7 @@ namespace App.Controllers
             {
                 HttpContext.Session.SetInt32("UsuarioId", usuarioAutenticado.UsuarioId);
                 // Autenticação bem-sucedida, faça o redirecionamento para a Admin
+                
                 return RedirectToAction("Index", "Admin", new { area = "Admin" });
             }
             else

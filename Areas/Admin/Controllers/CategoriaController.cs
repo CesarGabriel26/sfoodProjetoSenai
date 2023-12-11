@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using App.Context;
 using App.Models;
 using App.Filters;
+using System.Xml;
+using System.Text;
+using X.PagedList;
 
 namespace sfood.Controllers
 {
@@ -23,12 +26,92 @@ namespace sfood.Controllers
         }
 
         // GET: Categoria
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string botao,string? txtFiltro, string? celOrdenacao, int pagina = 1) 
         {
-            return _context.Categorias != null ?
-                        View(await _context.Categorias.ToListAsync()) :
-                        Problem("Entity set 'AppDbContext.Categorias'  is null.");
+            int PageSize = 5;
+
+            IQueryable<Categoria> lista = _context.Categorias;
+
+            if (botao == "Relatorio")
+            {
+                PageSize = lista.Count();
+            }
+
+
+            if (txtFiltro != null && txtFiltro != "")
+            {
+                ViewData["txtFiltro"] = txtFiltro;
+                lista = lista.Where(item => item.Nome.ToLower().Contains(txtFiltro.ToLower()));
+            }
+            
+
+            if (celOrdenacao == "Nome")
+            {
+                lista = lista.OrderBy(item => item.Nome.ToLower());
+            }
+            
+            if(botao == "XML")
+            {
+                return ExportarXML(lista.ToList());
+            }
+            else if(botao == "Json")
+            {
+                return ExportarJson(lista.ToList());
+            }
+            
+            return View(lista.ToPagedList(pagina, PageSize));
+
         }
+
+                        
+        private IActionResult ExportarJson(List<Categoria> lista)
+        {
+            var json = new StringBuilder();
+            json.AppendLine("{");
+            json.AppendLine(" \"Categoria\": [");
+            int total = 0;
+            foreach(var item in lista)
+            {
+                json.AppendLine("         {");
+                json.AppendLine($"         \"Nome\": \"{item.Nome}\",");
+                json.AppendLine("         }");
+                total++;
+                if (total < lista.Count())
+                {
+                    json.AppendLine("             ,");
+                }
+            }
+            json.AppendLine("        ]");
+            json.AppendLine("}");
+            return File(Encoding.UTF8.GetBytes(json.ToString()),
+            "application/json", "dados_categoria.json");
+        }
+
+        private IActionResult ExportarXML(List<Categoria> lista)
+        {
+            var arquivo = new StringWriter();
+            var xml = new XmlTextWriter(arquivo)
+            {
+                Formatting = Formatting.Indented
+            };
+            xml.WriteStartDocument();
+            xml.WriteStartElement("Dados");
+            xml.WriteStartElement("Categorias");
+
+            foreach (var item in lista)
+            {
+                xml.WriteStartElement("Categoria");
+                xml.WriteElementString("Nome", item.Nome);
+                xml.WriteEndElement();
+            }
+
+            xml.WriteEndElement();
+            xml.WriteEndElement();
+
+            return File(Encoding.UTF8.GetBytes(arquivo.ToString()),
+            "appilication/xml", "dados_categoria.xml");
+        }
+
 
         // GET: Categoria/Details/5
         public async Task<IActionResult> Details(int? id)

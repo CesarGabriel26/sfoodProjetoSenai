@@ -1,4 +1,4 @@
-@model IEnumerable<App.Models.Produto>
+@model X.PagedList.PagedList<App.Models.Produto>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,6 +13,12 @@
 <form class="d-flex align-items-center no-print" asp-action="Index" method="get">
     <input type="text" name="txtFiltro" placeholder="Digite aqui o que procura" value="@ViewBag.txtFiltro"
         class="form-control">
+
+    <select name="celOrdenacao" class="form-control" id="">
+        <option value="Nome">Ordenar por Nome</option>
+        <option value="CEP">Ordenar por Preço</option>
+        <option value="Login">Ordenar por Rate</option>
+    </select>
 
     <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Buscar</button>
     <button class="btn btn-success" value="Relatorio" name="botao" type="submit">Relatorio</button>
@@ -40,22 +46,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Nome
             </th>
             <th class="d-none d-md-table-cell">
-                @Html.DisplayNameFor(model => model.Imagem)
+                Imagem
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.preco)
+                preco
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EmExtoque)
+                EmExtoque
             </th>
             <th class="d-none d-md-table-cell">
-                @Html.DisplayNameFor(model => model.Rate)
+                Rate
             </th>
             <th class="d-none d-md-table-cell">
-                @Html.DisplayNameFor(model => model.Categoria)
+                Categoria
             </th>
             <th></th>
         </tr>
@@ -92,11 +98,69 @@
                     @Html.DisplayFor(modelItem => item.Categoria.Nome)
                 </td>
                 <td>
-                    <a class="" asp-action="Edit" asp-route-id="@item.IdPaises">Editar</a> |
-                    <a class="" asp-action="Details" asp-route-id="@item.IdPaises">Detalhes</a> |
-                    <a class="" asp-action="Delete" asp-route-id="@item.IdPaises">Deletar</a>
+                    <button class="btn btn-secondary dropdown-toggle btn-danger" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-gear-wide" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.IdPaises">Editar</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-action="Details" asp-route-id="@item.IdPaises">Detalhes</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-action="Delete" asp-route-id="@item.IdPaises">Deletar</a>
+                        </li>
+                    </ul>
+
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<div class="d-flex justify-content-center no-print">
+    <ul class="pagination">
+        @{
+            string primeira = "";
+            string ultima = "";
+        }
+
+        @if (!Model.HasPreviousPage)
+            primeira = "disabled";
+
+        @if (!Model.HasNextPage)
+            ultima = "disabled";
+
+        <li class="page-item @primeira">
+            <a class="page-link" asp-route-pagina="1" asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;&lt;</a>
+        </li>
+        <li class="page-item @primeira">
+            <a class="page-link" asp-route-pagina="@(Model.PageNumber - 1)"
+                asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;</a>
+        </li>
+
+        @for (int i = 1; i <= Model.PageCount; i++)
+        {
+            <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                <a class="page-link" asp-route-pagina="@i" asp-route-txtFiltro="@ViewData["txtFiltro"]">@i</a>
+            </li>
+        }
+
+        <li class="page-item @ultima">
+            <a class="page-link" asp-route-pagina="@(Model.PageNumber + 1)"
+                asp-route-txtFiltro="@ViewData["txtFiltro"]">></a>
+        </li>
+        <li class="page-item @ultima">
+            <a class="page-link" asp-route-pagina="@Model.PageCount" asp-route-txtFiltro="@ViewData["txtFiltro"]">>></a>
+        </li>
+
+    </ul>
+</div>
