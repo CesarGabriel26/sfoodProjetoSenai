@@ -21,10 +21,27 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        var id = HttpContext.Session.GetInt32("UsuarioId");
+        if (id != null)
+        {
+            Usuario UserObj = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == id);
+
+            ViewBag.UserPfp = UserObj.Imagem;
+        }
+
+
         return View(_context.Banners.ToList());
     }
     public IActionResult Produto()
     {
+        var id = HttpContext.Session.GetInt32("UsuarioId");
+        if (id != null)
+        {
+            Usuario UserObj = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == id);
+
+            ViewBag.UserPfp = UserObj.Imagem;
+        }
+
         var produtos = _context.Produtos.ToList();
         var categorias = _context.Categorias.ToList();
 
@@ -40,6 +57,14 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Details(int? id)
     {
+        var a = HttpContext.Session.GetInt32("UsuarioId");
+        if (a != null)
+        {
+            Usuario UserObj = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == a);
+
+            ViewBag.UserPfp = UserObj.Imagem;
+        }
+
         if (id == null || _context.Produtos == null)
         {
             return NotFound();
@@ -76,6 +101,14 @@ public class HomeController : Controller
 
     public IActionResult Carrinho()
     {
+        var id = HttpContext.Session.GetInt32("UsuarioId");
+        if (id != null)
+        {
+            Usuario UserObj = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == id);
+
+            ViewBag.UserPfp = UserObj.Imagem;
+        }
+        
         return View();
     }
 

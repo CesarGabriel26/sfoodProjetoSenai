@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\App_Data\\Dados.db"
     },
     {
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\App_Data\\Dados.db-shm",
+      "PackagePath": "staticwebassets\\App_Data\\Dados.db-shm"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\App_Data\\Dados.db-wal",
+      "PackagePath": "staticwebassets\\App_Data\\Dados.db-wal"
+    },
+    {
       "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\css\\Cardapio.css",
       "PackagePath": "staticwebassets\\css\\Cardapio.css"
     },
@@ -49,12 +57,20 @@
       "PackagePath": "staticwebassets\\img\\Moto.png"
     },
     {
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\Titulo.png",
+      "PackagePath": "staticwebassets\\img\\Titulo.png"
+    },
+    {
       "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
       "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\img\\logo2.png",
       "PackagePath": "staticwebassets\\img\\logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\js\\BuscaCep.js",
+      "PackagePath": "staticwebassets\\js\\BuscaCep.js"
     },
     {
       "Id": "C:\\Users\\Aluno\\Desktop\\sfood\\wwwroot\\js\\site.js",

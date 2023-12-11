@@ -2,8 +2,79 @@
     ViewData["Title"] = "Admin";
 }
 
+@section scripts {
+    <script src="~/js/BuscaCep.js"></script>
+}
 
 <div class="text-center">
     <h1 class="display-4">Console de Administração</h1>
-    <img src="http://192.168.0.148:5046/img/LogoIcon.png">
+</div>
+
+<div class="container d-flex flex-column justify-content-center align-items-center">
+
+    <div class="row">
+
+        <div class="col-4">
+
+            <img class="w-100" src="@ViewBag.UserPfp" alt="">
+
+        </div>
+
+        <div class="col-7">
+
+
+            <div class="row">
+
+                <div class=" text-center d-flex flex-column  borda ">
+                    <div class="row bg-dange  text-center ">
+                        <div class="col-md-11 text-start ms-4">
+                            <form asp-action="SingUp">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="col-12 d-flex justify-content-between">
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <input value="@ViewBag.UserName" disabled
+                                                class="form-control  form-control border border-warning border-2" />
+                                            <span  class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <input value="@ViewBag.UserCep" disabled id="Cep"
+                                                class="form-control  form-control border border-warning border-2" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input id="Endereco" disabled
+                                        class="form-control form-control border border-warning border-2" />
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <input value="@ViewBag.UserLog" disabled 
+                                        class="form-control  form-control border border-warning border-2" />
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <input value="@ViewBag.UserPass" disabled type="password"
+                                        class="form-control  form-control border border-warning border-2" />
+                                    
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
 </div>

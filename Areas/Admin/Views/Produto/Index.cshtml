@@ -75,7 +75,7 @@
                 </td>
                 <td class="d-none d-md-table-cell">
                     <div class="produtoimage">
-                        <img src="@item.Imagem" alt="">
+                        <img style="max-width: 150px;" src="@item.Imagem" alt="">
                     </div>
                 </td>
                 <td>
@@ -108,7 +108,7 @@
                             </svg>
                         </span>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu no-print">
                         <li>
                             <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.IdPaises">Editar</a>
                         </li>

@@ -22,28 +22,30 @@ function SetCategoria() {
 }
 
 if (BarraPesquisa) {
-    BarraPesquisa.addEventListener('keyup', () => {
-        Categorias.forEach(item => {
-            var cards = item.querySelectorAll('.card')
+    BarraPesquisa.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            Categorias.forEach(item => {
+                var cards = item.querySelectorAll('.card')
 
-            cards.forEach(card => {
+                cards.forEach(card => {
 
-                var nome = card.querySelector('.card-title').innerHTML.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-                var filtro = BarraPesquisa.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+                    var nome = card.querySelector('.card-title').innerHTML.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+                    var filtro = BarraPesquisa.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
 
-                if (nome.toLowerCase().indexOf(filtro) > -1) {
-                    card.style.display = "block"
-                } else {
-                    card.style.display = "none"
-                }
+                    if (nome.toLowerCase().indexOf(filtro) > -1) {
+                        var Card = card.parentNode.parentNode
+                        Card.scrollIntoView()
+                        card.style.border = "2px solid var(--Laranja)";
+                    } else {
+                        card.style.border = "none";
+                    }
 
+                })
             })
-        })
-
+        }
 
     })
 }
-
 
 //Obtendo o valor do parâmetro de qual botão foi clicado
 var parametros = new URLSearchParams(window.location.search);

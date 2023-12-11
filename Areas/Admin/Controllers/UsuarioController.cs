@@ -28,6 +28,7 @@ namespace sfood.Areas.Admin.Controllers
         // GET: Admin/Usuario
         public IActionResult Index(string botao,string? txtFiltro, string? celOrdenacao, int pagina = 1) 
         {
+            
             int PageSize = 5;
 
             IQueryable<Usuario> lista = _context.Usuarios;

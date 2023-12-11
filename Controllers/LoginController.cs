@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using App.Context;
 using App.Models;
+using System.Text.Json;
+
 namespace App.Controllers
 {
     public class LoginController : Controller
@@ -23,8 +25,9 @@ namespace App.Controllers
             {
                 HttpContext.Session.SetInt32("UsuarioId", usuarioAutenticado.UsuarioId);
                 // Autenticação bem-sucedida, faça o redirecionamento para a Admin
+                string jsonString = JsonSerializer.Serialize<Usuario>(usuarioAutenticado);
                 
-                return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                return RedirectToAction("Index", "Admin", new { area = "Admin"});
             }
             else
             {

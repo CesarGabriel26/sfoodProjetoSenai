@@ -39,6 +39,7 @@
     border: 1px solid transparent;
     border-radius: 10px;
     margin: 8px;
+    display: flex;
 }
 
 .BotaoLaranja:hover {
@@ -48,15 +49,67 @@
     border: 1px solid transparent;
     border-radius: 10px;
     margin: 8px;
+    border: 1px solid var(--Laranja);
 }
 
 .EfeitoLinks {
     color: black;
-    border: 
-    transition: ;
+    margin: 3px;
+    text-decoration: none;
+    transition: 300ms;
 }
 
 .EfeitoLinks:hover {
-    border: 1px solid var(--Laranja);
-    transition: 3ms;
+    color: var(--Laranja);
+    text-decoration: none;
+    transition: 300ms;
+}
+.imgcom{
+    margin-top: 120px;
+}
+.div-principal{
+    width: 900px;
+}
+.produtImagem{
+    margin-right: 30px;
+    margin-top: 30px;
+    width: 300px;
+}
+.BotaoVerde {
+    background-color: var(--Laranja);
+    box-shadow: 3px 3px 7px var(--DropShadow) inset;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 8px;
+    display: flex;
+    font-size: 20px;
+}
+.aling{
+    align-items: center;
+    text-align: center;
+}
+.full {
+    display:table;
+    width: 100%;
+  }
+  .left, .right {
+    display: table-cell;
+    width: 50%;
+    height: 200px;
+  }
+  .left { background-color: blue;}
+  .right { background-color: red;}
+.imggrande{
+    margin-left: 40px;
+    width: 550px;
+    height: 450px;
+}
+.pedido{
+    margin-top: 40px;
+    margin-left: 60px;
+}
+.imgcarri{
+    width: 100px;
+    height: 100px;
 }

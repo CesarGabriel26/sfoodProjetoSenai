@@ -20,6 +20,14 @@ namespace App.Admin.Controllers
 
         public IActionResult ListaBanners(string botao,string? txtFiltro, string? celOrdenacao, int pagina = 1) 
         {
+
+            var UsuarioId = HttpContext.Session.GetInt32("UsuarioId");
+
+            Usuario UserObj = _BancoDados.Usuarios.FirstOrDefault(u => u.UsuarioId == UsuarioId);
+
+            ViewBag.UserPfp = UserObj.Imagem;
+
+
             int PageSize = 5;
 
             IQueryable<Banner> lista = _BancoDados.Banners;

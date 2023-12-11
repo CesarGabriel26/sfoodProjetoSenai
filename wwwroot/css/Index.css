@@ -1,0 +1,11 @@
+.botaoAmarelo{
+    background-color: var(--Laranja);
+    box-shadow: 3px 3px 0px var(--DropShadow) inset;
+    color: white;
+    border: 0px solid var(--Laranja);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 130px;
+    height: 40px;
+    width: 130px;
+  }

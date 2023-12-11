@@ -57,6 +57,28 @@ main {
   }
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff9350 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff9350;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
 
 .logo img {
   height: 50px;
@@ -76,4 +98,92 @@ main {
 .form-control{
   border: 2px 0px 2px 0px solid black;
   color: var(--Laranja);
+}
+
+
+.card .card-img-top {
+  background-color: white !important;
+  min-width: 100% !important;
+  min-height: 150px !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.categoria .row {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  max-height: 360px;
+}
+
+.card .card-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+.Nome{
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.categoria {
+  overflow: hidden;
+  --DropShadow : rgba(193, 172, 132, 0.349);
+  box-shadow: -7px 7px 10px var(--DropShadow),7px -7px 10px var(--DropShadow);
+  
+}
+
+.IMGproduto{
+  background-color: white !important;
+  min-width: 100% !important;
+  min-height: 150px !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ProdutoCard{
+  box-shadow: -7px 7px 10px var(--DropShadow),7px -7px 10px var(--DropShadow); 
+}
+
+.espacamento{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.espacamentoBotao{
+  margin-left: 50px;
+}
+
+
+.BemVindo{
+  background-image: url();
+}
+
+.BarraPesquisa-group {
+  height: 40px;
+  max-width: 300px;
+  border: 1px solid var(--Laranja);
+}
+
+.BarraPesquisa-group input, .BarraPesquisa-group span {
+  border: none;
+}
+.BarraPesquisa-group input {
+  border-right: 1px solid var(--Laranja);
+}
+
+
+
+
+
+.carringo-item {
+  border-bottom: 2px solid var(--Laranja);
+}
+
+.bg-laranja {
+  background: var(--Laranja);
 }

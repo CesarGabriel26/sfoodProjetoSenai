@@ -53,7 +53,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Nome)
                 </td>
-                <td>
+                <td class="no-print">
                     <a class="" asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
                     <a class="" asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> |
                     <a class="" asp-action="Delete" asp-route-id="@item.CategoriaId">Deletar</a>
@@ -63,10 +63,10 @@
     </tbody>
 </table>
 <p>
-    <a asp-action="Create" class="botaoVermelho">Criar novo item</a>
+    <a asp-action="Create" class="botaoVermelho no-print">Criar novo item</a>
 </p>
 
-<div class="d-flex justify-content-center no-print">
+<div class="d-flex justify-content-center no-print no-print">
     <ul class="pagination">
         @{
             string primeira = "";

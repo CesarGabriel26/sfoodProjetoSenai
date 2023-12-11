@@ -29,9 +29,14 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link " asp-area="Admin" asp-controller="Categoria"
-                                asp-action="Index">
-                                Categoria</a>
+                            <a class="nav-link " asp-area="Admin" asp-controller="Admin" asp-action="Index">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="Admin" asp-controller="Categoria" asp-action="Index">
+                                Categoria
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " asp-area="Admin" asp-controller="Produto"
@@ -46,10 +51,13 @@
                                 asp-action="ListaBanners">Banners</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " asp-area="Admin" asp-controller="Usuario"
-                                asp-action="Sair">Sair</a>
+                            <a class="nav-link " asp-area="Admin" asp-controller="Usuario" asp-action="Sair">Sair</a>
                         </li>
                     </ul>
+
+                    <a asp-area="Admin" asp-controller="Admin" asp-action="Index"><img src="@ViewBag.UserPfp"
+                            style="height: 50px;" class="rounded-circle"></a>
+
                 </div>
             </div>
         </nav>
